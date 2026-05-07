@@ -1,3 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palash Sinha | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+:root{
+  --color1:#ff1e1e;
+  --color2:#990000;
+}
+
+body{
+  font-family:'Oswald', sans-serif;
+  letter-spacing:0.5px;
+  background:
+  linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+  url('./images/wallpaper.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ========= BACKGROUND ELEMENTS ========= */
+
+.background-elements{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  overflow:hidden;
+  z-index:-1;
+  pointer-events:none;
+}
+
+.background-elements span{
+  position:absolute;
+  display:block;
+  width:25px;
+  height:25px;
+  background:rgba(255,0,0,0.08);
+  border:1px solid rgba(255,0,0,0.12);
+  backdrop-filter:blur(2px);
+  animation:animateElements 18s linear infinite;
+  bottom:-150px;
+  border-radius:6px;
+  box-shadow:0 0 15px rgba(255,0,0,0.08);
+}
+
+.background-elements span:nth-child(1){
+  left:10%;
+  width:40px;
+  height:40px;
+  animation-delay:0s;
+  animation-duration:16s;
+}
+
+.background-elements span:nth-child(2){
+  left:20%;
+  animation-delay:2s;
+  animation-duration:12s;
+}
+
+.background-elements span:nth-child(3){
+  left:35%;
+  width:50px;
+  height:50px;
+  animation-delay:4s;
+}
+
+.background-elements span:nth-child(4){
+  left:50%;
+  width:30px;
+  height:30px;
+  animation-duration:14s;
+}
+
+.background-elements span:nth-child(5){
+  left:65%;
+  animation-delay:1s;
+}
+
+.background-elements span:nth-child(6){
+  left:75%;
+  width:45px;
+  height:45px;
+  animation-delay:3s;
+}
+
+.background-elements span:nth-child(7){
+  left:85%;
+  animation-duration:20s;
+}
+
+.background-elements span:nth-child(8){
+  left:95%;
+  width:35px;
+  height:35px;
+  animation-delay:5s;
+}
+
+@keyframes animateElements{
+
+  0%{
+    transform:translateY(0) rotate(0deg);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-1200px) rotate(720deg);
+    opacity:0;
+  }
+
+}
+
+/* ========= NAVBAR ========= */
+
+nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:rgba(0,0,0,0.85);
+  position:fixed;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,0,0,0.15);
+}
+
+nav h2{
+  color:var(--color1);
+  font-size:28px;
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:3px;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:var(--color1);
+}
+
+/* ========= HERO ========= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:120px 8%;
+  gap:40px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-name{
+  display:flex;
+  flex-direction:column;
+  line-height:0.95;
+}
+
+.small-text{
+  font-size:40px;
+  letter-spacing:3px;
+  color:#ffffff;
+  font-weight:400;
+}
+
+.big-name{
+  font-size:120px;
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:6px;
+  color:var(--color1);
+  text-shadow:0 0 20px rgba(255,0,0,0.25);
+}
+
+.hero-text h3{
+  font-size:28px;
+  color:#ffffff;
+  margin-bottom:20px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.hero-text p{
+  color:#d1d5db;
+  line-height:1.8;
+  margin-bottom:30px;
+  max-width:600px;
+  font-weight:300;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:var(--color1);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:600;
+  transition:0.3s;
+  animation:zoomIn 1.8s ease;
+  box-shadow:0 0 20px rgba(255,0,0,0.4);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  background:#ffffff;
+  color:black;
+}
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:350px;
+  height:350px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid var(--color1);
+  box-shadow:0 0 40px rgba(255,0,0,0.4);
+  animation:floatImage 4s ease-in-out infinite;
+}
+
+/* ========= SECTIONS ========= */
+
+section{
+  padding:100px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:60px;
+  color:var(--color1);
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:4px;
+}
+
+.about p{
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+  color:#f1f1f1;
+  line-height:2;
+  font-size:18px;
+  font-weight:300;
+}
+
+/* ========= CARDS ========= */
+
+.skills-container,
+.projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.skill-card,
+.project-card{
+  background:#111111;
+  border:1px solid rgba(255,0,0,0.15);
+  border-radius:15px;
+  transition:0.4s;
+  backdrop-filter:blur(10px);
+}
+
+.skill-card{
+  padding:30px;
+  text-align:center;
+}
+
+.skill-card:hover,
+.project-card:hover{
+  transform:translateY(-10px);
+  border-color:var(--color1);
+  box-shadow:0 0 25px rgba(255,0,0,0.2);
+}
+
+.skill-card h3,
+.project-content h3{
+  color:var(--color1);
+  margin-bottom:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.skill-card p,
+.project-content p{
+  color:#d1d5db;
+  line-height:1.8;
+  font-weight:300;
+}
+
+.project-card{
+  overflow:hidden;
+}
+
+.project-content{
+  padding:25px;
+}
+
+/* ========= SOCIAL PREVIEW ========= */
+
+.social-preview{
+  width:100%;
+  height:500px;
+  min-height:500px;
+  max-height:500px;
+  object-fit:cover;
+  object-position:top;
+  display:block;
+  border-radius:15px 15px 0 0;
+}
+
+iframe{
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid rgba(255,0,0,0.2);
+  background:black;
+  width:100%;
+  height:500px;
+}
+
+/* ========= CONTACT ========= */
+
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin:15px 0;
+  color:#f1f1f1;
+  font-size:18px;
+}
+
+.contact a,
+#experience a{
+  color:var(--color1);
+  text-decoration:none;
+  transition:0.3s;
+  font-weight:500;
+}
+
+.contact a:hover,
+#experience a:hover{
+  color:white;
+  text-shadow:0 0 12px var(--color1);
+}
+
+/* ========= FOOTER ========= */
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#050505;
+  color:white;
+  border-top:1px solid rgba(255,0,0,0.15);
+}
+
+/* ========= SCROLL ========= */
+
+.hidden{
+  opacity:0;
+  filter:blur(5px);
+  transform:translateY(80px);
+  transition:all 1.2s ease;
+}
+
+.show{
+  opacity:1;
+  filter:blur(0);
+  transform:translateY(0);
+}
+
+/* ========= FLOATING CONTACT ========= */
+
+.floating-contact{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:linear-gradient(45deg,var(--color1),var(--color2));
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  color:white;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(255,0,0,0.6);
+  z-index:9999;
+  animation:floatButton 3s ease-in-out infinite;
+  transition:0.4s;
+}
+
+.floating-contact:hover{
+  transform:scale(1.12);
+  box-shadow:0 0 35px rgba(255,0,0,1);
+}
+
+/* ========= ANIMATIONS ========= */
+
+@keyframes zoomIn{
+
+  from{
+    opacity:0;
+    transform:scale(0.7);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+
+}
+
+@keyframes floatImage{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-18px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+@keyframes floatButton{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
 /* ========= MOBILE NAVBAR SCROLL ========= */
 
 @media(max-width:900px){
@@ -29,3 +519,276 @@
   }
 
 }
+  </style>
+</head>
+
+<body>
+
+  <div class="background-elements">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <nav>
+
+    <h2>Portfolio</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <section class="hero hidden" id="home">
+
+    <div class="hero-text">
+
+      <h1 class="hero-name">
+        <span class="small-text">Hello, I'm</span>
+        <span class="big-name">Palash Sinha</span>
+      </h1>
+
+      <h3>Graphic Designer | Video Editor</h3>
+
+      <p>
+        Creative graphic designer & video editor crafting visually striking designs and cinematic edits that bring ideas to life.
+        Passionate about storytelling, branding, and creating content that leaves an impact.
+      </p>
+
+      <a href="#projects" class="btn">
+        View Projects
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="./images/IMG_20251216_212632.jpg.jpeg" alt="Profile">
+    </div>
+
+  </section>
+
+  <section class="about hidden" id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+      I am a passionate graphic designer and video editor focused on visual storytelling, branding, and cinematic content creation.
+      I enjoy creating real-world creative projects including social media designs, promotional videos, motion graphics, and high-quality visual edits.
+    </p>
+
+  </section>
+
+  <section class="hidden" id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill-card">
+        <h3>Canva</h3>
+        <p>
+          Creatives, Branding, Social Media,
+          Typography, Posters, Ad Creatives,
+          Marketing Visuals
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Capcut</h3>
+        <p>
+          Smooth Cuts, Cinematic Transitions,
+          Motion Graphics, Video Storytelling
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>DaVinci Resolve</h3>
+        <p>
+          Color grading, Cinematic Editing,
+          Professional Cuts, Smooth Transitions
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Adobe Lightroom</h3>
+
+        <p>
+          Photo editing, cinematic color grading,
+          visual enhancement, aesthetic tones,
+          and professional image retouching.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="hidden" id="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="skill-card">
+
+      <h3>Crème Cheesecake</h3>
+
+      <iframe
+        src="https://www.instagram.com/cremebbsr/embed"
+        width="100%"
+        height="500"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+
+      <br>
+
+      <p>
+        Managed social media pages, created promotional posts,
+        designed creatives, and edited content for the Patia-based small business.
+      </p>
+
+      <br>
+
+      <a href="https://www.instagram.com/cremebbsr/" target="_blank">
+        Visit Page
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="hidden" id="projects">
+
+    <h2 class="section-title">Projects & Social Showcase</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+        <img class="social-preview" src="./images/pinterest-preview.jpg.png" alt="Pinterest Portfolio">
+
+        <div class="project-content">
+
+          <h3>Pinterest Portfolio</h3>
+
+          <p>
+            Collection of creative inspirations, graphic concepts,
+            branding aesthetics, typography, and visual design showcases.
+          </p>
+
+          <br>
+
+          <a href="https://pin.it/2rMhHFYRE" target="_blank">
+            Visit Pinterest
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="project-card">
+
+        <iframe
+          class="social-preview"
+          src="https://www.instagram.com/palashit_00/embed"
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+
+        <div class="project-content">
+
+          <h3>Instagram Portfolio</h3>
+
+          <p>
+            Showcase of video edits, cinematic reels,
+            social media creatives, and branding projects.
+          </p>
+
+          <br>
+
+          <a href="https://www.instagram.com/palashit_00/" target="_blank">
+            Visit Instagram
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact hidden" id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/palashit_00/" target="_blank">
+        @palashit_00
+      </a>
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:palash.sinha619@gmail.com">
+        palash.sinha619@gmail.com
+      </a>
+    </p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/palash-sinha-504170210" target="_blank">
+        palash-sinha-504170210
+      </a>
+    </p>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Palash Sinha. All Rights Reserved.</p>
+  </footer>
+
+  <a href="#contact" class="floating-contact">
+    ✉
+  </a>
+
+  <script>
+
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+        else{
+          entry.target.classList.remove('show');
+        }
+
+      });
+
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+
+    hiddenElements.forEach((el) => observer.observe(el));
+
+  </script>
+
+</body>
+</html>
