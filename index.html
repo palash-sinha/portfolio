@@ -488,37 +488,35 @@ footer{
   }
 
 }
-/* ========= MOBILE NAVBAR SCROLL ========= */
+
+/* ========= RESPONSIVE ========= */
 
 @media(max-width:900px){
 
-  nav{
-    display:block;
-    overflow:hidden;
-    padding:20px 15px;
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
   }
 
-  nav h2{
-    margin-bottom:12px;
+  .big-name{
+    font-size:70px;
+  }
+
+  .small-text{
+    font-size:28px;
   }
 
   nav ul{
-    display:flex;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    overflow-y:hidden;
-    gap:20px;
-    width:max-content;
-    max-width:100%;
-    white-space:nowrap;
-    -webkit-overflow-scrolling:touch;
+    gap:15px;
   }
 
-  nav ul::-webkit-scrollbar{
-    display:none;
+  .hero-image img{
+    width:250px;
+    height:250px;
   }
 
 }
+
   </style>
 </head>
 
