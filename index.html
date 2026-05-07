@@ -493,20 +493,23 @@ footer{
 @media(max-width:900px){
 
   nav{
-    overflow-x:auto;
-    overflow-y:hidden;
-    white-space:nowrap;
-    padding:20px;
+    padding:20px 15px;
   }
 
   nav ul{
-    display:flex;
+    overflow-x:auto;
+    overflow-y:hidden;
+
     flex-wrap:nowrap;
-    width:max-content;
-    gap:20px;
+
+    width:100%;
+
+    padding-bottom:5px;
+
+    -webkit-overflow-scrolling:touch;
   }
 
-  nav::-webkit-scrollbar{
+  nav ul::-webkit-scrollbar{
     display:none;
   }
 
